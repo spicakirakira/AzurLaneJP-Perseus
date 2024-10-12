@@ -57,6 +57,13 @@ sed -ir "s#\($oncreate\)#\1\n    const-string v0, \"Perseus\"\n\n\    invoke-sta
 echo "Build Patched Azur Lane apk"
 java -jar apktool.jar -q -f b com.YoStarJP.AzurLane -o build/com.YoStarJP.AzurLane.patched.apk
 
+rm AzurLane/com.YoStarJP.AzurLane.apk
+cp com.YoStarJP.AzurLane.apk AzurLane/
+cd AzurLane
+zip -r ../com.YoStarJP.AzurLane.xapk .
+cd ..
+mv com.YoStarJP.AzurLane.xapk build/
+
 echo "Set Github Release version"
 #s=($(./apkeep -a com.YoStarJP.AzurLane -l))
 echo "PERSEUS_VERSION=8.2.15" >> $GITHUB_ENV
