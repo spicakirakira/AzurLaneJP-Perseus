@@ -25,11 +25,11 @@ chmod +x apkeep
 
 # Download Azur Lane
 if [ ! -f "AzurLane/com.YoStarJP.AzurLane.apk" ]; then
-    #echo "Get Azur Lane apk"
+    echo "Get Azur Lane apk"
 
     # eg: wget "your download link" -O "your packge name.apk" -q
     #if you want to patch .xapk, change the suffix here to wget "your download link" -O "your packge name.xapk" -q
-    wget "https://github.com/spicakirakira/com.YoStarJP.AzurLane.xapk/raw/refs/heads/main/com.YoStarJP.AzurLane.xapk" -O com.YoStarJP.AzurLane.xapk -q
+    wget https://github.com/spicakirakira/com.YoStarJP.AzurLane.xapk/raw/refs/heads/main/com.YoStarJP.AzurLane.xapk -O com.YoStarJP.AzurLane.xapk -q
     echo "apk downloaded !"
     
     # if you can only download .xapk file uncomment 2 lines below. (delete the '#')
