@@ -10,6 +10,7 @@ for f in build/*.apk; do
     apksigner sign --key testkey.pk8 --cert testkey.x509.pem $f
 done
 
+rm com.YoStarJP.AzurLane.xapk
 rm AzurLane/com.YoStarJP.AzurLane.apk
 cp  build/com.YoStarJP.AzurLane.patched.apk AzurLane/com.YoStarJP.AzurLane.apk
 cd AzurLane
