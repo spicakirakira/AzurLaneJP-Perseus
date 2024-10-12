@@ -58,5 +58,5 @@ echo "Build Patched Azur Lane apk"
 java -jar apktool.jar -q -f b com.YoStarJP.AzurLane -o build/com.YoStarJP.AzurLane.patched.apk
 
 echo "Set Github Release version"
-s=($(./apkeep -a com.YoStarJP.AzurLane -l))
-echo "PERSEUS_VERSION=$(echo ${s[-1]})" >> $GITHUB_ENV
+#s=($(./apkeep -a com.YoStarJP.AzurLane -l))
+echo "PERSEUS_VERSION=8.2.15" >> $GITHUB_ENV
